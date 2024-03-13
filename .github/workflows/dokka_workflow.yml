@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Dokka Documentation
         run:
-          cd watermarker
+          cd watermarker;
           ./gradlew dokkaHtml
 
       - name: Deploy Dokka Documentation to GitHub Pages
