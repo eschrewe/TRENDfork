@@ -49,6 +49,12 @@ kotlin {
     }
 }
 
+tasks {
+    dokkaHtml {
+        outputDirectory = file("$buildDir/docs")
+    }
+}
+
 configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
     verbose.set(true)
     android.set(false)
