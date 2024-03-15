@@ -17,13 +17,25 @@ jobs:
         with:
           java-version: 11
 
-      - name: Build Dokka Documentation
-        run:
-          cd watermarker;
-          ./gradlew dokkaHtml
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
 
-      - name: Deploy Dokka Documentation to GitHub Pages
+      - name: Build dokka HTML dokumentation
+        run: ./gradlew dokkaHtml
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
-          publish_dir: ./watermarker/build/docs
+          publish_dir: ./docs
+
+#      - name: Build Dokka Documentation
+#        run:
+#          cd watermarker;
+#          ./gradlew dokkaHtml
+#
+#      - name: Deploy Dokka Documentation to GitHub Pages
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          deploy_key: ${{ secrets.DEPLOY_KEY }}
+#          publish_dir: ./docs
