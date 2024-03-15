@@ -21,7 +21,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build dokka HTML dokumentation
-        run: ./gradlew dokkaHtml
+        run: cd watermarker; ./gradlew dokkaHtml
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
