@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-  pull_request:
+#  pull_request:
 
 jobs:
   build:
@@ -26,12 +26,12 @@ jobs:
       - name: Build dokka HTML dokumentation
         run: cd watermarker; ./gradlew dokkaHtml
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          deploy_key: ${{ secrets.DEP_KEY_SECRET }}
-          publish_dir: ./docs
-          publish_branch: gh-pages
+#      - name: Deploy to GitHub Pages
+#        uses: peaceiris/actions-gh-pages@v3
+#        with:
+#          deploy_key: ${{ secrets.DEP_KEY_SECRET }}
+#          publish_dir: ./docs
+#          publish_branch: gh-pages
 
 #      - name: Build Dokka Documentation
 #        run:
