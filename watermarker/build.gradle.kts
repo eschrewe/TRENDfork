@@ -51,7 +51,7 @@ kotlin {
 
 tasks {
     dokkaHtml {
-        outputDirectory = file("../docs")
+//        outputDirectory = file("../docs")
     }
 }
 
