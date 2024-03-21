@@ -55,5 +55,5 @@ jobs:
         with:
           branch: main
           folder: watermarker/build/dokka/html
-          target-folder: docs/api
+          target-folder: docs
           commit-message: "docs(watermarker): updated API docs from @ ${{ github.repository }}@${{ github.sha }} 🚀"
