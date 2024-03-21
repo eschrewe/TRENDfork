@@ -3,7 +3,7 @@ name: Dokka Documentation
 on:
   push:
     branches:
-      - main
+      - foo
 permissions:
   contents: write
 
