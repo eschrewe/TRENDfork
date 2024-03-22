@@ -53,7 +53,7 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' && github.event_name != 'pull_request' }}
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          branch: main
+          branch: gh-pages
           folder: watermarker/build/dokka/html
           target-folder: docs
           commit-message: "docs(watermarker): updated API docs from @ ${{ github.repository }}@${{ github.sha }} 🚀"
