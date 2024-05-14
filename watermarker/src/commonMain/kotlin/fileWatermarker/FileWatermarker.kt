@@ -13,7 +13,7 @@ import de.fraunhofer.isst.trend.watermarker.returnTypes.Status
 import de.fraunhofer.isst.trend.watermarker.watermarks.Watermark
 
 interface FileWatermarker<File : WatermarkableFile, SpecificWatermark : Watermark> {
-    /** Adds a [watermark] to [file] */
+    /** Adds a [watermark] to [file] ###*/
     fun addWatermark(
         file: File,
         watermark: Watermark,
